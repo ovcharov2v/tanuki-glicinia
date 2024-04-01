@@ -1,0 +1,67 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	- title = "Тануки Family Глициния"
+	- meta.description = "Тануки Family Глициния"
+block content
+	// Section Hero
+	section.section-hero.container
+		.section-hero__content
+			.section-hero__bg
+			picture
+				source(srcset='images/section-hero/img-desktop@1x.webp, images/section-hero/img-desktop@2x.webp 2x', type='image/webp', media="(min-width: 1024px)")
+				source(srcset='images/section-hero/img-tablet@1x.webp, images/section-hero/img-tablet@2x.webp 2x', type='image/webp', media="(min-width: 768px)")
+				source(srcset='images/section-hero/img-mobile@1x.webp, images/section-hero/img-mobile@2x.webp 2x', type='image/webp', media="(max-width: 767.999px)")
+				img.section-hero__img(src='images/section-hero/img-desktop@1x.png', srcset='images/section-hero/img-desktop@2x.png 2x', alt)
+			h1.heading1.section-hero__title Как выращивать глицинию
+			p.section-hero__text Расцветайте с “Тануки”
+
+	// Section About
+	section.section-about.container
+		h2.heading2.section-about__title Что такое Глициния?
+		p.section-about__text Глициния — вьющаяся лиана-многолетник с красивыми листьями и яркими цветами, свисающими подобно кистям. Вы можете вырастить ее у себя дома или в саду — она быстро оплетает любые опоры и беседки, подойдет даже как комнатное растение.
+
+	// Section Process
+	section.section-process
+		.container
+			h2.heading2.section-process__title Как выращивать?
+			// Step
+			article.section-process__step
+				.section-process__step-img-box
+					+picture("section-process/img1", "jpg", alt="")(class="section-process__step-img")
+				.section-process__step-content
+					h3.heading3.section-process__step-title
+						span.section-process__step-number 1
+						|Выбираем грунт
+					p.section-process__step-text Глициния любит солнце, тепло и хороший полив. А вот почва может быть практически любая — она нетребовательна, купите любой питательный грунт. Если выращиваете глицинию дома, позаботьтесь о просторном горшке или кадке, но он потребуется чуть позже: начните с небольшого.
+			// Step
+			article.section-process__step
+				.section-process__step-img-box
+					+picture("section-process/img2", "jpg", alt="")(class="section-process__step-img")
+				.section-process__step-content
+					h3.heading3.section-process__step-title
+						span.section-process__step-number 2
+						|Сажаем семена
+					p.section-process__step-text Замочите семечко в теплой воде на 12 часов и после немного подержите на воздухе. Увлажните почву, положите семечко, не заказывая сильно. Сверху накройте стеклом или пленкой и уберите в теплое темное место. Периодически проверяйте влажность земли, опрыскивайте и проветривайте свою мини—теплицу.
+			// Step
+			article.section-process__step
+				.section-process__step-img-box
+					+picture("section-process/img3", "jpg", alt="")(class="section-process__step-img")
+				.section-process__step-content
+					h3.heading3.section-process__step-title
+						span.section-process__step-number 3
+						|Выращиваем глицинию
+					p.section-process__step-text Примерно через две недели семена должны прорасти. Теперь ваш мини-парник нужно вынести из темноты на солнечное окно. Пусть света будет много, но вот прямых солнечных лучей лучше избегать. Когда появится второй листочек, пересадите в горшок побольше.
+			// Step
+			article.section-process__step
+				.section-process__step-img-box
+					+picture("section-process/img4", "jpg", alt="")(class="section-process__step-img")
+				.section-process__step-content
+					h3.heading3.section-process__step-title
+						span.section-process__step-number 4
+						|Поддерживаем растение
+					p.section-process__step-text Важен умеренный точный полив: без пересыхания и без излишней влаги. Через год можно высадить глицинию на постоянное место в грунт или в большой цветочный горшок — не менее 15 литров. Не забывайте обрезать боковые побеги и подкармливать растение. Зацветает она примерно в возрасте трех лет.
+

@@ -1,0 +1,35 @@
+.section-about {
+	margin-bottom: 34px;
+
+	@include tablet {
+		margin-bottom: 32px;
+	}
+
+	@include desktop {
+		margin-bottom: 60px;
+	}
+
+	&__title {
+		margin-bottom: 14px;
+
+		@include tablet {
+			margin-bottom: 18px;
+		}
+
+		@include desktop {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__text {
+		line-height: 1.4;
+
+		@include tablet {
+		}
+
+		@include desktop {
+			max-width: 820px;
+			line-height: 1.3;
+		}
+	}
+}

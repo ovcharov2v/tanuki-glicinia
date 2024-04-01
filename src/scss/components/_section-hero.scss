@@ -1,0 +1,151 @@
+.section-hero {
+	margin-bottom: 34px;
+
+	@include tablet {
+		margin-bottom: 32px;
+	}
+
+	@include desktop {
+		margin-bottom: 60px;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 0;
+		padding: 20px 10px 40px;
+		border-radius: 12px;
+		box-shadow: 0 24px 32px 0 rgba(0, 0, 0, 0.04), 0 0 32px 0 rgba(0, 0, 0, 0.04);
+		overflow: hidden;
+
+		@include tablet {
+			min-height: 335px;
+			padding: 60px 40px;
+		}
+
+		@include desktop {
+			min-height: 521px;
+			padding: 80px 60px;
+		}
+	}
+
+	&__bg {
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(180deg, #9b9dff 0.01%, #c7c8ff 23.81%, #fff 97.5%);
+
+		&::before {
+			@include background-image("../images/section-hero/bg-left");
+			position: absolute;
+			top: -10%;
+			left: 0;
+			width: 100%;
+			height: 66%;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: left center;
+			content: "";
+		}
+
+		&::after {
+			@include background-image("../images/section-hero/bg-right");
+			position: absolute;
+			top: -43%;
+			right: -3%;
+			width: 100%;
+			height: 143%;
+			background-size: contain;
+			background-repeat: no-repeat;
+			background-position: right center;
+			content: "";
+		}
+
+		@include tablet {
+			&::before {
+				top: -59%;
+				left: 0;
+				width: 100%;
+				height: 155%;
+			}
+
+			&::after {
+				top: -22%;
+				right: -1.4%;
+				width: 100%;
+				height: 179%;
+			}
+		}
+
+		@include desktop {
+			&::before {
+				top: -29%;
+				left: 0;
+				width: 100%;
+				height: 135%;
+			}
+
+			&::after {
+				top: -9%;
+				right: 0;
+				width: 100%;
+				height: 155%;
+			}
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 51%;
+		margin: 0 auto 7px;
+
+		@include tablet {
+			position: absolute;
+			right: 6%;
+			top: -15%;
+			width: 48.4%;
+			margin: 0;
+		}
+
+		@include desktop {
+			right: 4%;
+			top: -27%;
+			width: 42.3%;
+		}
+
+		@include desktop-xl {
+			right: 14%;
+		}
+	}
+
+	&__title {
+		max-width: 520px;
+		margin: 0 auto 12px;
+		text-transform: uppercase;
+		text-align: center;
+
+		@include tablet {
+			margin: 0 0 15px;
+			text-align: left;
+		}
+
+		@include desktop {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__text {
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 22px;
+		color: $color-black;
+		text-align: center;
+
+		@include tablet {
+			line-height: 1.4;
+			text-align: left;
+		}
+	}
+}

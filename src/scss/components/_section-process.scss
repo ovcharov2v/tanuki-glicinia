@@ -1,0 +1,104 @@
+.section-process {
+	padding-top: 24px;
+	padding-bottom: 24px;
+	background-color: $color-gray-light;
+
+	@include tablet {
+		padding-top: 34px;
+		padding-bottom: 40px;
+	}
+
+	@include desktop {
+		padding-top: 50px;
+		padding-bottom: 60px;
+	}
+
+	&__title {
+		margin-bottom: 16px;
+
+		@include tablet {
+			margin-bottom: 22px;
+		}
+
+		@include desktop {
+			margin-bottom: 48px;
+		}
+	}
+
+	&__step {
+		padding: 12px;
+		box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.04), 0 0 24px 0 rgba(0, 0, 0, 0.04);
+		background-color: $color-white;
+		border-radius: 12px;
+
+		&:not(:last-child) {
+			margin-bottom: 16px;
+		}
+
+		@include tablet {
+			display: grid;
+			grid-template: auto / 139px auto;
+			grid-gap: 24px;
+			padding: 24px;
+
+			&:not(:last-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__step-img-box {
+		position: relative;
+		height: 90px;
+		margin-bottom: 20px;
+
+		@include tablet {
+			height: 100%;
+			margin-bottom: 0;
+		}
+	}
+
+	&__step-img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 8px;
+		object-fit: cover;
+	}
+
+	&__step-content {
+	}
+
+	&__step-number {
+		display: inline-block;
+		margin-right: 6px;
+		color: #9C9FFF;
+
+		&::after {
+			content: ".";
+		}
+
+		@include tablet {
+			display: block;
+			margin-right: 0;
+			margin-bottom: 11px;
+
+			&::after {
+				content: none;
+			}
+		}
+
+		@include desktop {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__step-title {
+		margin-bottom: 8px;
+	}
+
+	&__step-text {
+	}
+}
